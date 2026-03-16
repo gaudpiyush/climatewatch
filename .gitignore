@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+
+# Data files — NEVER commit these, they're too large
+*.nc
+*.tif
+*.shp
+*.dbf
+*.shx
+*.prj
+data-pipeline/raw/
+data-pipeline/processed/
+
+# CDS API key (just in case)
+.cdsapirc
+
+# Node
+node_modules/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
