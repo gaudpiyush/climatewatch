@@ -4,7 +4,7 @@ __pycache__/
 .env
 venv/
 
-# Data files — NEVER commit these, they're too large
+# Data files — too large
 *.nc
 *.tif
 *.shp
@@ -12,7 +12,9 @@ venv/
 *.shx
 *.prj
 data-pipeline/raw/
+data-pipeline/extracted/
 data-pipeline/processed/
+data-pipeline/boundaries/
 
 # CDS API key (just in case)
 .cdsapirc
@@ -20,6 +22,7 @@ data-pipeline/processed/
 # Node
 node_modules/
 dist/
+.next/
 
 # OS
 .DS_Store
