@@ -28,7 +28,7 @@ from scipy.interpolate import griddata
 # Paths
 BASE_DIR    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXTRACT_DIR = os.path.join(BASE_DIR, "extracted")
-BOUNDARY    = os.path.join(BASE_DIR, "boundaries", "india_districts.geojson")
+BOUNDARY = os.path.join(BASE_DIR, "boundaries", "india_districts_clean.geojson")
 OUT_DIR     = os.path.join(BASE_DIR, "processed")
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -178,7 +178,7 @@ def process(scenario, period, gdf, baseline_means=None):
 
     # Build output dataframe
     df = pd.DataFrame({
-        "district_id":       gdf["dt_code"].values,
+        "district_id":       gdf["district_id"].values,
         "district_name":     gdf["district"].values,
         "state":             gdf["st_nm"].values,
         "scenario":          scenario,
